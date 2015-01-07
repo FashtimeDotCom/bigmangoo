@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<entity-engine-xml>
-
-    <!-- 支付宝支付方式 -->
-    <PaymentMethodType description="Ali Pay" paymentMethodTypeId="ALI_PAY"/>
-
-</entity-engine-xml>
