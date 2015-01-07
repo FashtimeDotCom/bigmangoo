@@ -35,6 +35,6 @@
         title="EcShop"
         server="default-server"
         location="webapp/ecshop"
-        base-permission="OFBTOOLS,ECSHOP"
-        mount-point="/ecshop"/>
+        mount-point="/ecshop"
+        app-bar-display="false"/>
 </ofbiz-component>

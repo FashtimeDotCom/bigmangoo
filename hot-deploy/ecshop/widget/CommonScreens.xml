@@ -2,26 +2,42 @@
 <screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
 
+    <!-- 定义全局可用的，或者全局默认的环境变量,js,css -->
     <screen name="main-decorator">
         <section>
             <actions>
+
+                <!-- 全局和局部全球化文件定义 -->
                 <property-map resource="EcShopUiLabels" map-name="uiLabelMap" global="true"/>
                 <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
 
+                <!-- 公司基本信息 -->
                 <set field="layoutSettings.companyName" from-field="uiLabelMap.EcShopCompanyName" global="true"/>
                 <set field="layoutSettings.companySubtitle" from-field="uiLabelMap.EcShopCompanySubtitle" global="true"/>
-
-                <set field="activeApp" value="ecshop" global="true"/>
-                <set field="applicationMenuName" value="MainAppBar" global="true"/>
-                <set field="applicationMenuLocation" value="component://ecshop/widget/EcShopMenus.xml" global="true"/>
                 <set field="applicationTitle" value="${uiLabelMap.EcShopApplication}" global="true"/>
+
+                <!-- 获取当前店铺的模板设置 -->
+                <set field="visualThemeId" from-field="productStore.visualThemeId" default-value="ECSHOP_DEFAULT"/>
+                <service service-name="getVisualThemeResources">
+                    <field-map field-name="visualThemeId"/>
+                    <field-map field-name="themeResources" from-field="layoutSettings"/>
+                </service>
+                <set field="layoutSettings" from-field="themeResources" default-value="${layoutSettings}" global="true"/>
+
+                <!-- 设模板头与模板尾 -->
+                <set field="headerTemplateLocation" from-field="layoutSettings.VT_HDR_TMPLT_LOC[0]" default-value="component://ecshop/webapp/ecshop/includes/header.ftl"/>
+                <set field="footerTemplateLocation" from-field="layoutSettings.VT_FTR_TMPLT_LOC[0]" default-value="component://ecshop/webapp/ecshop/includes/footer.ftl"/>
+
             </actions>
             <widgets>
-                <include-screen name="ApplicationDecorator" location="component://commonext/widget/CommonScreens.xml"/>
+                <!--<platform-specific><html><html-template location="${headerTemplateLocation}"/></html></platform-specific>-->
+                <decorator-section-include name="body"/>
+                <!--<platform-specific><html><html-template location="${footerTemplateLocation}"/></html></platform-specific>-->
             </widgets>
         </section>
     </screen>
 
+    <!-- 首页布局 -->
     <screen name="EcShopCommonDecorator">
         <section>
             <actions>
@@ -30,15 +46,9 @@
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
                         <section>
-                            <condition>
-                                <if-has-permission permission="ECSHOP" action="_VIEW"/>
-                            </condition>
                             <widgets>
                                 <decorator-section-include name="body"/>
                             </widgets>
-                            <fail-widgets>
-                                <label style="h3">${uiLabelMap.EcShopViewPermissionError}</label>
-                            </fail-widgets>
                         </section>
                     </decorator-section>
                 </decorator-screen>
