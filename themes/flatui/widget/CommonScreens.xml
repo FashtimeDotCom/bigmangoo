@@ -36,7 +36,15 @@ under the License.
                         <not><if-empty field="globalContext.productStore"/></not>
                     </condition>
                     <widgets>
+
+                        <platform-specific>
+                            <html><html-template location="component://flatui/webapp/flatui/common/header.ftl"/></html>
+                        </platform-specific>
                         <decorator-section-include name="body"/>
+                        <platform-specific>
+                            <html><html-template location="component://flatui/webapp/flatui/common/footer.ftl"/></html>
+                        </platform-specific>
+
                     </widgets>
                     <fail-widgets>
                         <label text="当前网站未指定店铺"/>
@@ -53,7 +61,7 @@ under the License.
 
             </actions>
             <widgets>
-                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                <decorator-screen name="main-decorator">
                     <decorator-section name="body">
                         <platform-specific>
                             <html><html-template location="component://flatui/webapp/flatui/main.ftl"/></html>
