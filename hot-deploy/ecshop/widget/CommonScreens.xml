@@ -40,7 +40,11 @@ under the License.
                         <platform-specific>
                             <html><html-template location="component://flatui/webapp/flatui/common/header.ftl"/></html>
                         </platform-specific>
-                        <decorator-section-include name="body"/>
+
+                        <container style="container ecshop-body">
+                            <decorator-section-include name="body"/>
+                        </container>
+
                         <platform-specific>
                             <html><html-template location="component://flatui/webapp/flatui/common/footer.ftl"/></html>
                         </platform-specific>
@@ -63,11 +67,41 @@ under the License.
             <widgets>
                 <decorator-screen name="main-decorator">
                     <decorator-section name="body">
+
+                        <include-screen name="site-header"/>
+
                         <platform-specific>
                             <html><html-template location="component://flatui/webapp/flatui/main.ftl"/></html>
                         </platform-specific>
+
                     </decorator-section>
                 </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <!-- 网站头部 -->
+    <screen name="site-header">
+        <section>
+            <widgets>
+
+                <platform-specific>
+                    <html><html-template location="component://flatui/webapp/flatui/site-header.ftl"/></html>
+                </platform-specific>
+
+                <include-screen name="site-navbar"/>
+
+            </widgets>
+        </section>
+    </screen>
+
+    <!-- 顶部导航条 -->
+    <screen name="site-navbar">
+        <section>
+            <widgets>
+                <platform-specific>
+                    <html><html-template location="component://flatui/webapp/flatui/navbar.ftl"/></html>
+                </platform-specific>
             </widgets>
         </section>
     </screen>
