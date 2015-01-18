@@ -22,7 +22,13 @@ under the License.
 <web-app>
     <display-name>Open For Business - Flat UI Visual Theme</display-name>
     <description>Flat UI Visual Theme</description>
-    
+
+    <context-param>
+        <param-name>mainDecoratorLocation</param-name>
+        <param-value>component://flatui/widget/CommonScreens.xml</param-value>
+        <description>The location of the main-decorator screen to use for this webapp; referred to as a context variable in screen def XML files.</description>
+    </context-param>
+
     <session-config>
         <session-timeout>1</session-timeout>    
     </session-config>

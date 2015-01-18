@@ -26,58 +26,53 @@ under the License.
         <section>
             <actions>
 
-                <!-- 初始化当前店铺数据 -->
-                <script location="component://ecommerce/widget/EcommerceSetup.groovy"/>
-
                 <set field="THEME_ID" global="true" default-value="flatui"/>
 
             </actions>
             <widgets>
-                <section>
-                    <condition>
-                        <not><if-empty field="globalContext.productStore"/></not>
-                    </condition>
-                    <widgets>
 
-                        <platform-specific>
-                            <html><html-template location="component://${THEME_ID}/webapp/${THEME_ID}/common/header.ftl"/></html>
-                        </platform-specific>
+                <decorator-section-include name="body"/>
 
-                        <container style="container ecshop-body">
-                            <decorator-section-include name="body"/>
-                        </container>
-
-                        <platform-specific>
-                            <html><html-template location="component://${THEME_ID}/webapp/${THEME_ID}/common/footer.ftl"/></html>
-                        </platform-specific>
-
-                    </widgets>
-                    <fail-widgets>
-                        <label text="当前网站未指定店铺"/>
-                    </fail-widgets>
-                </section>
             </widgets>
         </section>
     </screen>
 
-    <!-- 首页视图 -->
-    <screen name="main">
+    <!-- 网站头部 -->
+    <screen name="site-header">
         <section>
-            <actions>
-
-            </actions>
             <widgets>
+
                 <decorator-screen name="main-decorator">
                     <decorator-section name="body">
 
-                        <include-screen name="site-header" location="component://${THEME_ID}/widget/WidgetScreens.xml"/>
+                        <platform-specific>
+                            <html><html-template location="component://${THEME_ID}/webapp/${THEME_ID}/site-header.ftl"/></html>
+                        </platform-specific>
+
+                        <include-screen name="site-navbar"/>
+
+                    </decorator-section>
+                </decorator-screen>
+
+            </widgets>
+        </section>
+    </screen>
+
+    <!-- 顶部导航条 -->
+    <screen name="site-navbar">
+        <section>
+            <widgets>
+
+                <decorator-screen name="main-decorator" >
+                    <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://${THEME_ID}/webapp/${THEME_ID}/main.ftl"/></html>
+                            <html><html-template location="component://${THEME_ID}/webapp/${THEME_ID}/navbar.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
                 </decorator-screen>
+
             </widgets>
         </section>
     </screen>
