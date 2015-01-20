@@ -32,6 +32,6 @@ under the License.
         title="ecshop"
         server="default-server"
         location="webapp/ecshop"
-        mount-point="/"
+        mount-point="/ecshop"
         app-bar-display="false"/>
 </ofbiz-component>

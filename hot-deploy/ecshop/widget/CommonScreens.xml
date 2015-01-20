@@ -29,8 +29,6 @@ under the License.
                 <!-- 初始化当前店铺数据 -->
                 <script location="component://ecommerce/widget/EcommerceSetup.groovy"/>
 
-                <set field="THEME_ID" global="true" default-value="flatui"/>
-
             </actions>
             <widgets>
                 <section>
@@ -40,7 +38,7 @@ under the License.
                     <widgets>
 
                         <platform-specific>
-                            <html><html-template location="component://${THEME_ID}/webapp/${THEME_ID}/common/header.ftl"/></html>
+                            <html><html-template location="component://ecshop/webapp/ecshop/common/header.ftl"/></html>
                         </platform-specific>
 
                         <container style="container ecshop-body">
@@ -48,7 +46,7 @@ under the License.
                         </container>
 
                         <platform-specific>
-                            <html><html-template location="component://${THEME_ID}/webapp/${THEME_ID}/common/footer.ftl"/></html>
+                            <html><html-template location="component://ecshop/webapp/ecshop/common/footer.ftl"/></html>
                         </platform-specific>
 
                     </widgets>
@@ -70,10 +68,10 @@ under the License.
                 <decorator-screen name="main-decorator">
                     <decorator-section name="body">
 
-                        <include-screen name="site-header" location="component://${THEME_ID}/widget/WidgetScreens.xml"/>
+                        <include-screen name="site-header" location="component://ecshop/widget/WidgetScreens.xml"/>
 
                         <platform-specific>
-                            <html><html-template location="component://${THEME_ID}/webapp/${THEME_ID}/main.ftl"/></html>
+                            <html><html-template location="component://ecshop/webapp/ecshop/main.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
