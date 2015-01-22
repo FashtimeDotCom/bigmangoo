@@ -21,19 +21,19 @@ under the License.
 <screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
 
-    <!-- 首页网站头部 -->
-    <screen name="site-header">
+    <!-- 首页视图 -->
+    <screen name="main">
         <section>
             <widgets>
+                <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
 
-                <platform-specific>
-                    <html><html-template location="component://ecshop/webapp/ecshop/widget/site-header.ftl"/></html>
-                </platform-specific>
+                        <platform-specific>
+                            <html><html-template location="component://ecshop/webapp/ecshop/main.ftl"/></html>
+                        </platform-specific>
 
-                <platform-specific>
-                    <html><html-template location="component://ecshop/webapp/ecshop/widget/site-navbar.ftl"/></html>
-                </platform-specific>
-
+                    </decorator-section>
+                </decorator-screen>
             </widgets>
         </section>
     </screen>

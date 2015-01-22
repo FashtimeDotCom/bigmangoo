@@ -58,21 +58,24 @@ under the License.
         </section>
     </screen>
 
-    <!-- 首页视图 -->
-    <screen name="main">
+    <!-- 首页装饰器 -->
+    <screen name="home-decorator">
         <section>
-            <actions>
-
-            </actions>
             <widgets>
                 <decorator-screen name="main-decorator">
                     <decorator-section name="body">
 
-                        <include-screen name="site-header" location="component://ecshop/widget/WidgetScreens.xml"/>
+                        <platform-specific>
+                            <html><html-template location="component://ecshop/webapp/ecshop/widget/site-header.ftl"/></html>
+                        </platform-specific>
 
                         <platform-specific>
-                            <html><html-template location="component://ecshop/webapp/ecshop/main.ftl"/></html>
+                            <html><html-template location="component://ecshop/webapp/ecshop/widget/site-navbar.ftl"/></html>
                         </platform-specific>
+
+                        <container style="container ecshop-body">
+                            <decorator-section-include name="body"/>
+                        </container>
 
                     </decorator-section>
                 </decorator-screen>

@@ -107,6 +107,6 @@ under the License.
     <request-map uri="main"><security https="false" auth="false"/><response name="success" type="view" value="main"/></request-map>
 
     <!-- ecshop view -->
-    <view-map name="main" type="screen" page="component://ecshop/widget/CommonScreens.xml#main"/>
+    <view-map name="main" type="screen" page="component://ecshop/widget/HomeScreens.xml#main"/>
 
 </site-conf>
