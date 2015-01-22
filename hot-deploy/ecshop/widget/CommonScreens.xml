@@ -41,7 +41,7 @@ under the License.
                             <html><html-template location="component://ecshop/webapp/ecshop/common/header.ftl"/></html>
                         </platform-specific>
 
-                        <container style="container ecshop-body">
+                        <container style="container">
                             <decorator-section-include name="body"/>
                         </container>
 
@@ -73,9 +73,7 @@ under the License.
                             <html><html-template location="component://ecshop/webapp/ecshop/widget/site-navbar.ftl"/></html>
                         </platform-specific>
 
-                        <container style="container ecshop-body">
-                            <decorator-section-include name="body"/>
-                        </container>
+                        <decorator-section-include name="body"/>
 
                     </decorator-section>
                 </decorator-screen>
