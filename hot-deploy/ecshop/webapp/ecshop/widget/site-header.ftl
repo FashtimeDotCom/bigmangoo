@@ -19,7 +19,7 @@
 
         <div class="pull-right">
 
-            <button type="button" class="btn btn-info">登录</button>
+            <a href="<@ofbizUrl>${checkLoginUrl}</@ofbizUrl>" type="button" class="btn btn-info">登录</a>
 
         </div>
 
