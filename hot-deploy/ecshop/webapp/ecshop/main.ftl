@@ -42,19 +42,19 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="http://img0.pcgames.com.cn/pcgames/1309/24/3082401_3.jpg" alt="http://img0.pcgames.com.cn/pcgames/1309/24/3082401_3.jpg">
+                    <img src="/ecshop/images/paipai.jpg" alt="/ecshop/images/paipai.jpg">
                     <div class="carousel-caption">
                         圖片1
                     </div>
                 </div>
                 <div class="item">
-                    <img src="http://img0.pcgames.com.cn/pcgames/1309/24/3082401_3.jpg" alt="http://img0.pcgames.com.cn/pcgames/1309/24/3082401_3.jpg">
+                    <img src="/ecshop/images/paipai.jpg" alt="/ecshop/images/paipai.jpg">
                     <div class="carousel-caption">
                         圖片2
                     </div>
                 </div>
                 <div class="item">
-                    <img src="http://img0.pcgames.com.cn/pcgames/1309/24/3082401_3.jpg" alt="http://img0.pcgames.com.cn/pcgames/1309/24/3082401_3.jpg">
+                    <img src="/ecshop/images/paipai.jpg" alt="/ecshop/images/paipai.jpg">
                     <div class="carousel-caption">
                         圖片3
                     </div>

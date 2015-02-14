@@ -105,8 +105,14 @@ under the License.
     <!-- ecshop request -->
     <!-- 首页 -->
     <request-map uri="main"><security https="false" auth="false"/><response name="success" type="view" value="main"/></request-map>
+    <!-- 产品列表页 -->
+    <request-map uri="productList"><security https="false" auth="false"/><response name="success" type="view" value="productList"/></request-map>
+    <!-- 产品详细页 -->
+    <request-map uri="productDetail"><security https="false" auth="false"/><response name="success" type="view" value="productDetail"/></request-map>
 
     <!-- ecshop view -->
     <view-map name="main" type="screen" page="component://ecshop/widget/HomeScreens.xml#main"/>
+    <view-map name="productList" type="screen" page="component://ecshop/widget/ProductScreens.xml#productList"/>
+    <view-map name="productDetail" type="screen" page="component://ecshop/widget/ProductScreens.xml#productDetail"/>
 
 </site-conf>

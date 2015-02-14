@@ -21,26 +21,12 @@ under the License.
 <screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
 
-    <!-- 首页视图 -->
-    <screen name="main">
-        <section>
-            <widgets>
-                <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
-                    <decorator-section name="body">
-
-                        <platform-specific>
-                            <html><html-template location="component://ecshop/webapp/ecshop/main.ftl"/></html>
-                        </platform-specific>
-
-                    </decorator-section>
-                </decorator-screen>
-            </widgets>
-        </section>
-    </screen>
-
     <!-- 产品列表页视图 -->
     <screen name="productList">
         <section>
+            <actions>
+                <entity-condition entity-name="Product" list="productList"/>
+            </actions>
             <widgets>
                 <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
@@ -52,6 +38,36 @@ under the License.
                     </decorator-section>
                 </decorator-screen>
             </widgets>
+        </section>
+    </screen>
+
+    <!-- 产品详细页视图 -->
+    <screen name="productDetail">
+        <section>
+            <condition>
+                <not><if-empty field="requestParameters.productId"/></not>
+            </condition>
+            <actions>
+                <entity-one entity-name="Product" value-field="productMap" use-cache="true"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+
+                        <platform-specific>
+                            <html><html-template location="component://ecshop/webapp/ecshop/product/productDetail.ftl"/></html>
+                        </platform-specific>
+
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+            <fail-widgets>
+                <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <label text="请输入产品ID"/>
+                    </decorator-section>
+                </decorator-screen>
+            </fail-widgets>
         </section>
     </screen>
 
