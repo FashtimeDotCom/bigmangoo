@@ -18,9 +18,11 @@
     <div class="col-md-4">
 
         <div class="pull-right">
-
-            <a href="<@ofbizUrl>${checkLoginUrl}</@ofbizUrl>" type="button" class="btn btn-info">登录</a>
-
+            <#if userLogin?has_content && userLogin.userLoginId != "anonymous">
+                <a href="<@ofbizUrl>logout</@ofbizUrl>" type="button" class="btn btn-info">${uiLabelMap.CommonLogout}</a>
+            <#else/>
+                <a href="<@ofbizUrl>${checkLoginUrl}</@ofbizUrl>" type="button" class="btn btn-info">${uiLabelMap.CommonLogin}</a>
+            </#if>
         </div>
 
     </div>

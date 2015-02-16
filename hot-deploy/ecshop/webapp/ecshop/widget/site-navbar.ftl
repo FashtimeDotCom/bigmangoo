@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="<@ofbizUrl>main</@ofbizUrl>">首页</a></li>
+                    <li class="active"><a href="<@ofbizUrl>main</@ofbizUrl>">${uiLabelMap.CommonMain}</a></li>
                 </ul>
 
             </div>

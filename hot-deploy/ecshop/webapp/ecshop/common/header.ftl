@@ -12,7 +12,7 @@
     <!-- Loading Flat UI -->
     <link href="/ecshop/images/css/flat-ui.min.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="/ecshop/images/img/favicon.ico">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
