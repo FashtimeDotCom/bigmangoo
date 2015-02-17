@@ -8,19 +8,13 @@
 
         <div class="row">
 
-            <#list productList as productMap>
-                <#if productMap.smallImageUrl?has_content>
+            <#list productCategoryMembers as productCategoryMember>
 
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img src="${(productMap.smallImageUrl)!}" alt="/images/products/GZ-1000/small.png">
-                            <div class="caption">
-                                <small><a target="_blank" href="<@ofbizUrl>productDetail?productId=${(productMap.productId)!}</@ofbizUrl>">${(productMap.productName)!}</a></small>
-                            </div>
-                        </div>
-                    </div>
+                ${setRequestAttribute("optProductId", productCategoryMember.productId)}
+                ${setRequestAttribute("productCategoryMember", productCategoryMember)}
+                ${setRequestAttribute("listIndex", productCategoryMember_index)}
+                ${screens.render(productsummaryScreen)}
 
-                </#if>
             </#list>
 
         </div>

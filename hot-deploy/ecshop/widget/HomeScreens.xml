@@ -24,6 +24,9 @@ under the License.
     <!-- 首页视图 -->
     <screen name="main">
         <section>
+            <actions>
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/catalog/ProductCategories.groovy"/>
+            </actions>
             <widgets>
                 <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">

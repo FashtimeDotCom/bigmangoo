@@ -2,30 +2,22 @@
     <div class="col-md-2">
 
         <ul class="list-group">
-            <li class="list-group-item">
-                手機
-            </li>
-            <li class="list-group-item">
-                平板
-            </li>
-            <li class="list-group-item">
-                路由器
-            </li>
-            <li class="list-group-item">
-                小米盒子
-            </li>
-            <li class="list-group-item">
-                小米電視
-            </li>
-            <li class="list-group-item">
-                手機
-            </li>
-            <li class="list-group-item">
-                平板
-            </li>
-            <li class="list-group-item">
-                路由器
-            </li>
+
+            <#list completedTree as completedNode>
+                <li class="list-group-item">
+                    <a href="javascript:document.category_form_${(completedNode.productCategoryId)!}.submit();">
+                        <#if completedNode.categoryName?has_content>
+                            ${(completedNode.categoryName)!}
+                        <#else>
+                            ${(completedNode.categoryDescription)!}
+                        </#if>
+                    </a>
+                    <form action="<@ofbizUrl>productList</@ofbizUrl>" method="post" name="category_form_${(completedNode.productCategoryId)!}">
+                        <input hidden="hidden" name="category_id" value="${(completedNode.productCategoryId)!}">
+                    </form>
+                </li>
+            </#list>
+
         </ul>
 
     </div>
