@@ -22,7 +22,7 @@ under the License.
          xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
 
     <!-- 产品列表页视图 -->
-    <screen name="productList">
+    <screen name="productCategoryList">
         <section>
             <actions>
                 <set field="productsummaryScreen" value="component://ecshop/widget/ProductScreens.xml#productSummary"/>
@@ -36,7 +36,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://ecshop/webapp/ecshop/product/productList.ftl"/></html>
+                            <html><html-template location="component://ecshop/webapp/ecshop/product/productCategoryList.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
