@@ -64,6 +64,32 @@ under the License.
     </screen>
 
     <!-- 产品详细页视图 -->
-
+    <screen name="product">
+        <section>
+            <actions>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/entry/catalog/Product.groovy"/>
+                <script location="component://order/webapp/ordermgr/WEB-INF/actions/entry/catalog/ProductDetail.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <section>
+                        <condition>
+                            <not><if-empty field="product"/></not>
+                        </condition>
+                            <widgets>
+                                <platform-specific>
+                                    <html><html-template location="component://ecshop/webapp/ecshop/product/productdetail.ftl"/></html>
+                                </platform-specific>
+                            </widgets>
+                            <fail-widgets>
+                                <label style="head2">${uiLabelMap.ProductProductNotFound} ${productId}!</label>
+                            </fail-widgets>
+                        </section>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
 
 </screens>

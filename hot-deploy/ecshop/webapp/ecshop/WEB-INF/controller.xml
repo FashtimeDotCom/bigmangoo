@@ -134,5 +134,6 @@ under the License.
     <view-map name="login" type="screen" page="component://ecshop/widget/HomeScreens.xml#login"/>
     <view-map name="main" type="screen" page="component://ecshop/widget/HomeScreens.xml#main"/>
     <view-map name="productCategoryList" type="screen" page="component://ecshop/widget/ProductScreens.xml#productCategoryList"/>
+    <view-map name="product" type="screen" page="component://ecshop/widget/ProductScreens.xml#product"/>
 
 </site-conf>
