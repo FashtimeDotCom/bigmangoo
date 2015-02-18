@@ -19,7 +19,7 @@
     <div class="thumbnail">
         <img src="<@ofbizContentUrl>${contentPathPrefix?if_exists}${smallImageUrl}</@ofbizContentUrl>" alt="Small Image">
         <div class="caption">
-            <small><a target="_blank" href="<@ofbizUrl>productDetail?product_id=${(product.productId)!}</@ofbizUrl>">${productContentWrapper.get("PRODUCT_NAME")?if_exists}</a></small>
+            <small><a target="_blank" href="${productUrl}">${productContentWrapper.get("PRODUCT_NAME")?if_exists}</a></small>
         </div>
     </div>
 </div>

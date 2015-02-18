@@ -124,13 +124,15 @@ under the License.
         <response name="success" type="view" value="productCategoryList" save-current-view="true"/>
     </request-map>
     <!-- 产品详细页 -->
-    <request-map uri="productDetail"><security https="false" auth="false"/><response name="success" type="view" value="productDetail"/></request-map>
+    <request-map uri="product">
+        <security https="false" auth="false"/>
+        <response name="success" type="view" value="product" save-current-view="true"/>
+    </request-map>
 
     <!-- ecshop view -->
     <!-- 登录界面 -->
     <view-map name="login" type="screen" page="component://ecshop/widget/HomeScreens.xml#login"/>
     <view-map name="main" type="screen" page="component://ecshop/widget/HomeScreens.xml#main"/>
     <view-map name="productCategoryList" type="screen" page="component://ecshop/widget/ProductScreens.xml#productCategoryList"/>
-    <view-map name="productDetail" type="screen" page="component://ecshop/widget/ProductScreens.xml#productDetail"/>
 
 </site-conf>
