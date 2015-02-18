@@ -48,7 +48,5 @@
 
     <div id="center" class="col-md-10">
 
-        这是首页的促销界面
-
     </div>
 </div>
