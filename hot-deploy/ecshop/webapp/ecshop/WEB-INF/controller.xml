@@ -105,35 +105,11 @@ under the License.
     <!-- ecshop request -->
     <!-- 首页 -->
     <request-map uri="main"><security https="false" auth="false"/><response name="success" type="view" value="main"/></request-map>
-    <!-- 商品分类显示页面 -->
-    <request-map uri="productCategoryList">
-        <security https="false" auth="false"/>
-        <response name="success" type="view" value="productCategoryList" save-current-view="true"/>
-    </request-map>
-    <request-map uri="productCategoryListSecure">
-        <security https="true" auth="false"/>
-        <response name="success" type="view" value="productCategoryList" save-current-view="true"/>
-    </request-map>
-    <!-- 产品分类分页页面 -->
-    <request-map uri="categoryAjaxFired">
-        <security https="false" auth="false"/>
-        <response name="success" type="view" value="productCategoryList" save-current-view="true"/>
-    </request-map>
-    <request-map uri="categoryAjaxFiredSecure">
-        <security https="true" auth="false"/>
-        <response name="success" type="view" value="productCategoryList" save-current-view="true"/>
-    </request-map>
-    <!-- 产品详细页 -->
-    <request-map uri="product">
-        <security https="false" auth="false"/>
-        <response name="success" type="view" value="product" save-current-view="true"/>
-    </request-map>
 
     <!-- ecshop view -->
     <!-- 登录界面 -->
     <view-map name="login" type="screen" page="component://ecshop/widget/HomeScreens.xml#login"/>
+    <!-- 首页 -->
     <view-map name="main" type="screen" page="component://ecshop/widget/HomeScreens.xml#main"/>
-    <view-map name="productCategoryList" type="screen" page="component://ecshop/widget/ProductScreens.xml#productCategoryList"/>
-    <view-map name="product" type="screen" page="component://ecshop/widget/ProductScreens.xml#product"/>
 
 </site-conf>
