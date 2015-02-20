@@ -70,6 +70,9 @@ under the License.
     <!-- 首页装饰器 -->
     <screen name="home-decorator">
         <section>
+            <actions>
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/Main.groovy"/>
+            </actions>
             <widgets>
                 <decorator-screen name="main-decorator">
                     <decorator-section name="body">
