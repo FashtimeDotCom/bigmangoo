@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+
+    <!-- bigmangoo仓库 -->
+    <Facility facilityId="BigMangooWarehouse" facilityTypeId="WAREHOUSE" facilityName="大芒果电商仓" description="大芒果电子商务网站专用仓库" ownerPartyId="Company" defaultInventoryItemTypeId="NON_SERIAL_INV_ITEM" defaultWeightUomId="WT_lb" defaultDaysToShip="25" geoPointId="9000"/>
+
+    <!-- bigmangoo店铺 -->
+    <ProductStore productStoreId="9001" storeName="大芒果官方网店" companyName="bigmangoo" title="大芒果商城"
+                  subtitle="大芒果电子商务商城" payToPartyId="Company" daysToCancelNonPay="30" prorateShipping="Y" prorateTaxes="Y"
+                  inventoryFacilityId="BigMangooWarehouse" oneInventoryFacility="Y" checkInventory="Y" reserveInventory="Y" balanceResOnOrderCreation="Y" reserveOrderEnumId="INVRO_FIFO_REC" requireInventory="N"
+                  defaultLocaleString="zh" defaultCurrencyUomId="CNY" defaultSalesChannelEnumId="WEB_SALES_CHANNEL" allowPassword="Y" explodeOrderItems="N" retryFailedAuths="Y" reqReturnInventoryReceive="N"
+                  headerApprovedStatus="ORDER_APPROVED" itemApprovedStatus="ITEM_APPROVED" digitalItemApprovedStatus="ITEM_APPROVED" headerDeclinedStatus="ORDER_REJECTED"
+                  itemDeclinedStatus="ITEM_REJECTED" headerCancelStatus="ORDER_CANCELLED" itemCancelStatus="ITEM_CANCELLED" orderNumberPrefix="bigmangoo_"
+                  authDeclinedMessage="遇到技术问题无法完成支付，请呼叫客服协助解决"
+                  authFraudMessage="Your order has been rejected and your account has been disabled due to fraud."
+                  authErrorMessage="Problem connecting to payment processor; we will continue to retry and notify you by email."
+                  storeCreditValidDays="90" storeCreditAccountEnumId="FIN_ACCOUNT"
+                  visualThemeId="EC_DEFAULT" prodSearchExcludeVariants="Y" autoApproveInvoice="Y" shipIfCaptureFails="Y" autoApproveOrder="Y" showOutOfStockProducts="Y"/>
+
+    <!-- bigmangoo店铺支付 -->
+    <ProductStorePaymentSetting productStoreId="9001" paymentMethodTypeId="EXT_OFFLINE" paymentServiceTypeEnumId="PRDS_PAY_EXTERNAL" paymentService="" paymentCustomMethodId=""/>
+
+    <!-- 店铺仓库关联 -->
+    <ProductStoreFacility productStoreId="9001" facilityId="BigMangooWarehouse" fromDate="2001-05-13 12:00:00.0"/>
+
+    <!-- bigmangoo网站 -->
+    <WebSite webSiteId="bigmangoo" siteName="大芒果演示站点" productStoreId="9001" visualThemeSetId="ECOMMERCE"/>
+
+    <!-- 店铺目录 -->
+    <ProdCatalog prodCatalogId="BigmangooCatalog" catalogName="Bigmangoo Catalog" useQuickAdd="Y"/>
+    <ProductStoreCatalog productStoreId="9001" prodCatalogId="BigmangooCatalog" fromDate="2001-05-13 12:00:00.0" sequenceNum="1"/>
+
+    <!-- 店铺分类 -->
+    <ProductCategory categoryName="大芒果主分类"
+                     longDescription="大芒果产品管理主分类" productCategoryId="BIGMANGOOCATALOG" productCategoryTypeId="CATALOG_CATEGORY"/>
+    <ProductCategory categoryName="鞋子"
+                     longDescription="鞋子分类" productCategoryId="shoe" productCategoryTypeId="CATALOG_CATEGORY"/>
+    <ProductCategory categoryName="裤子"
+                     longDescription="裤子分类" productCategoryId="pant" productCategoryTypeId="CATALOG_CATEGORY"/>
+
+    <!-- 分类层级关系 -->
+    <ProductCategoryRollup fromDate="2001-05-13 12:00:00.0" parentProductCategoryId="BIGMANGOOCATALOG" productCategoryId="shoe"/>
+    <ProductCategoryRollup fromDate="2001-05-13 12:00:00.0" parentProductCategoryId="BIGMANGOOCATALOG" productCategoryId="pant"/>
+
+    <!-- 目录分类关联 -->
+    <ProdCatalogCategory prodCatalogId="BigmangooCatalog" productCategoryId="BIGMANGOOCATALOG" fromDate="2001-05-13 12:00:00.0"
+                         sequenceNum="1" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT"/>
+
+    <!-- 产品分类关联 -->
+    <ProductCategoryMember productCategoryId="shoe" productId="GZ-DIG" sequenceNum="4" fromDate="2001-05-13 12:00:00.0"/>
+    <ProductCategoryMember productCategoryId="shoe" productId="GZ-NEWS-1MO" sequenceNum="5" fromDate="2001-05-13 12:00:00.0"/>
+    <ProductCategoryMember productCategoryId="shoe" productId="GZ-BASKET" sequenceNum="6" fromDate="2001-05-13 12:00:00.0"/>
+    <ProductCategoryMember productCategoryId="shoe" productId="GZ-BASKET-PICK" sequenceNum="8" fromDate="2007-01-01 12:00:00.0"/>
+    <ProductCategoryMember productCategoryId="shoe" productId="GZ-1000" sequenceNum="10" fromDate="2001-05-13 12:00:00.0"/>
+    <ProductCategoryMember productCategoryId="pant" productId="GZ-1001" sequenceNum="11" fromDate="2001-05-13 12:00:00.0"/>
+    <ProductCategoryMember productCategoryId="pant" productId="GZ-1004" sequenceNum="14" fromDate="2001-05-13 12:00:00.0"/>
+    <ProductCategoryMember productCategoryId="pant" productId="GZ-1005" sequenceNum="15" fromDate="2001-05-13 12:00:00.0"/>
+    <ProductCategoryMember productCategoryId="pant" productId="GZ-1006" sequenceNum="16" fromDate="2001-05-13 12:00:00.0"
+                           comments="The Open Gizmo is compatibile with all other gimzos."/>
+
+</entity-engine-xml>
