@@ -34,9 +34,15 @@ under the License.
             </actions>
             <widgets>
 
-                <platform-specific>
-                    <html><html-template location="component://ecshop/webapp/ecshop/product/productCategoryList.ftl"/></html>
-                </platform-specific>
+                <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+
+                        <platform-specific>
+                            <html><html-template location="component://ecshop/webapp/ecshop/product/productCategoryList.ftl"/></html>
+                        </platform-specific>
+
+                    </decorator-section>
+                </decorator-screen>
 
             </widgets>
         </section>

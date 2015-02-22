@@ -116,14 +116,20 @@ under the License.
         <security https="false" auth="false"/>
         <response name="success" type="view" value="productCategoryList" save-current-view="true"/>
     </request-map>
-    <request-map uri="productCategoryListSecure">
-        <security https="true" auth="false"/>
-        <response name="success" type="view" value="productCategoryList" save-current-view="true"/>
-    </request-map>
-    <!-- 显示购物车 -->
+        <!-- 显示购物车 -->
     <request-map uri="showcart">
         <security https="false" auth="false"/>
         <response name="success" type="view" value="showcart"/>
+    </request-map>
+    <!-- 添加商品到购物车 -->
+    <request-map uri="additem">
+        <security https="false" auth="false"/>
+        <event type="java" path="org.ofbiz.order.shoppingcart.ShoppingCartEvents" invoke="addToCart"/>
+        <response name="success" type="view-last" value="showcart" save-last-view="true"/>
+        <response name="survey" type="view" value="survey"/>
+        <response name="product" type="view" value="product"/>
+        <response name="viewcart" type="request-redirect" value="showcart"/>
+        <response name="error" type="view" value="showcart"/>
     </request-map>
 
     <!-- ecshop view -->
