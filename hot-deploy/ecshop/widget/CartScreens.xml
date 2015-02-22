@@ -26,6 +26,8 @@ under the License.
         <section>
             <actions>
 
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/cart/ShowCart.groovy"/>
+
             </actions>
             <widgets>
 
