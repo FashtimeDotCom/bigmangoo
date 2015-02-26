@@ -21,25 +21,20 @@ under the License.
 <screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
 
-    <!-- 产品列表页视图 -->
-    <screen name="showcart">
+    <!-- 网站分类列表 -->
+    <screen name="siteCategory">
         <section>
             <actions>
 
-                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/cart/ShowCart.groovy"/>
+                <!-- 分类列表数据获取 -->
+                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/catalog/ProductCategories.groovy"/>
 
             </actions>
             <widgets>
 
-                <decorator-screen name="three-column-base-decorator" location="${parameters.mainDecoratorLocation}">
-                    <decorator-section name="body">
-
-                        <platform-specific>
-                            <html><html-template location="component://ecshop/webapp/ecshop/cart/showcart.ftl"/></html>
-                        </platform-specific>
-
-                    </decorator-section>
-                </decorator-screen>
+                <platform-specific>
+                    <html><html-template location="component://ecshop/webapp/ecshop/widget/site-category.ftl"/></html>
+                </platform-specific>
 
             </widgets>
         </section>

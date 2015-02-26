@@ -68,7 +68,7 @@ under the License.
     </screen>
 
     <!-- 首页装饰器 -->
-    <screen name="home-decorator">
+    <screen name="base-decorator">
         <section>
             <actions>
                 <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/Main.groovy"/>
@@ -77,15 +77,67 @@ under the License.
                 <decorator-screen name="main-decorator">
                     <decorator-section name="body">
 
+                        <!-- 网站标题，网站搜索框，个人快速操作栏 -->
                         <platform-specific>
                             <html><html-template location="component://ecshop/webapp/ecshop/widget/site-header.ftl"/></html>
                         </platform-specific>
 
+                        <!-- 网站快速导航 -->
                         <platform-specific>
                             <html><html-template location="component://ecshop/webapp/ecshop/widget/site-navbar.ftl"/></html>
                         </platform-specific>
 
                         <decorator-section-include name="body"/>
+
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <!-- 双栏装饰器 -->
+    <screen name="double-column-base-decorator">
+        <section>
+            <widgets>
+                <decorator-screen name="base-decorator">
+                    <decorator-section name="body">
+
+                        <container style="row">
+
+                            <container style="col-md-2">
+                                <include-screen name="${leftbarScreenName}" location="${leftbarScreenLocation}"/>
+                            </container>
+
+                            <container style="col-md-10">
+                                <decorator-section-include name="body"/>
+                            </container>
+
+                        </container>
+
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <!-- 三栏装饰器 -->
+    <screen name="three-column-base-decorator">
+        <section>
+            <widgets>
+                <decorator-screen name="base-decorator">
+                    <decorator-section name="body">
+
+                        <container style="row">
+                            <container style="col-md-2">
+                                <include-screen name="${leftbarScreenName}" location="${leftbarScreenLocation}"/>
+                            </container>
+                            <container style="col-md-8">
+                                <decorator-section-include name="body"/>
+                            </container>
+                            <container style="col-md-2">
+                                <include-screen name="${rightbarScreenName}" location="${rightbarScreenLocation}"/>
+                            </container>
+                        </container>
 
                     </decorator-section>
                 </decorator-screen>

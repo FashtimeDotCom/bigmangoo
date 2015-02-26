@@ -26,6 +26,10 @@ under the License.
         <section>
             <actions>
 
+                <!-- 网站分类列表 -->
+                <set field="leftbarScreenName" value="siteCategory" global="true"/>
+                <set field="leftbarScreenLocation" value="component://ecshop/widget/WidgetScreens.xml" global="true"/>
+
                 <property-map resource="ProductUiLabels" map-name="uiLabelMap" global="true"/>
                 <property-map resource="OrderUiLabels" map-name="uiLabelMap" global="true"/>
 
@@ -34,7 +38,7 @@ under the License.
             </actions>
             <widgets>
 
-                <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
+                <decorator-screen name="three-column-base-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
 
                         <platform-specific>

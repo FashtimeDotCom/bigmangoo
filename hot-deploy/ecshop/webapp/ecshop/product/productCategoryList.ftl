@@ -1,3 +1,4 @@
+
 <div class="row">
 
     <#if productCategoryMembers?has_content>
@@ -14,13 +15,13 @@
                     <div class="tile">
                         <img src="${(smallImageUrl)!}" alt="Compas" class="tile-image big-illustration">
                         <#assign productName = product.productName?default('')>
-                        <#if productName?length gt 15>
-                            <#assign productName = productName?substring(0,15)>
+                        <#if productName?length gt 10>
+                            <#assign productName = productName?substring(0,10)>
                         </#if>
                         <h3 class="tile-title">${(productName)!}</h3>
                         <#assign description = product.description?default('')>
-                        <#if description?length gt 15>
-                            <#assign description = description?substring(0,15)>
+                        <#if description?length gt 10>
+                            <#assign description = description?substring(0,10)>
                         </#if>
                         <p>${(description)!}</p>
 

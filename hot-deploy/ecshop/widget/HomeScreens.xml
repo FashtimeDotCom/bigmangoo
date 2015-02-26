@@ -25,10 +25,14 @@ under the License.
     <screen name="main">
         <section>
             <actions>
-                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/catalog/ProductCategories.groovy"/>
+
+                <!-- 网站分类列表 -->
+                <set field="leftbarScreenName" value="siteCategory" global="true"/>
+                <set field="leftbarScreenLocation" value="component://ecshop/widget/WidgetScreens.xml" global="true"/>
+
             </actions>
             <widgets>
-                <decorator-screen name="home-decorator" location="${parameters.mainDecoratorLocation}">
+                <decorator-screen name="double-column-base-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
 
                         <platform-specific>
@@ -57,5 +61,23 @@ under the License.
             </widgets>
         </section>
     </screen>
+
+    <!-- 注册页面 -->
+    <screen name="newcustomer">
+        <section>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+
+                        <platform-specific>
+                            <html><html-template location="component://ecshop/webapp/ecshop/newcustomer.ftl"/></html>
+                        </platform-specific>
+
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
 
 </screens>

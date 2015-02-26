@@ -111,12 +111,17 @@ under the License.
     <!-- ecshop request -->
     <!-- 首页 -->
     <request-map uri="main"><security https="false" auth="false"/><response name="success" type="view" value="main"/></request-map>
+    <!-- 注册用户 -->
+    <request-map uri="newcustomer">
+        <security https="true" auth="false"/>
+        <response name="success" type="view" value="newcustomer"/>
+    </request-map>
     <!-- 显示分类下的商品 -->
     <request-map uri="productCategoryList">
         <security https="false" auth="false"/>
         <response name="success" type="view" value="productCategoryList" save-current-view="true"/>
     </request-map>
-        <!-- 显示购物车 -->
+    <!-- 显示购物车 -->
     <request-map uri="showcart">
         <security https="false" auth="false"/>
         <response name="success" type="view" value="showcart"/>
@@ -137,6 +142,8 @@ under the License.
     <view-map name="login" type="screen" page="component://ecshop/widget/HomeScreens.xml#login"/>
     <!-- 首页 -->
     <view-map name="main" type="screen" page="component://ecshop/widget/HomeScreens.xml#main"/>
+    <!-- 注册页面 -->
+    <view-map name="newcustomer" type="screen" page="component://ecshop/widget/HomeScreens.xml#newcustomer"/>
     <!-- 显示分类下的商品 -->
     <view-map name="productCategoryList" type="screen" page="component://ecshop/widget/ProductScreens.xml#productCategoryList"/>
     <!-- 显示购物车 -->

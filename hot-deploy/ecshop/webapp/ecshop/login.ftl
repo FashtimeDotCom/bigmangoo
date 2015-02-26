@@ -16,6 +16,7 @@
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default">${uiLabelMap.CommonLogin}</button>
+                <a href="<@ofbizUrl>newcustomer</@ofbizUrl>" class="btn btn-primary">${uiLabelMap.EcommerceRegister}</a>
             </div>
         </div>
     </form>
