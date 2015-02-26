@@ -57,7 +57,7 @@ under the License.
         <filter-name>CatalogUrlFilter</filter-name>
         <display-name>CatalogUrlFilter</display-name>
         <filter-class>org.ofbiz.product.category.CatalogUrlFilter</filter-class>
-        <init-param><param-name>defaultLocaleString</param-name><param-value>zh_CN</param-value></init-param>
+        <init-param><param-name>defaultLocaleString</param-name><param-value>en_US</param-value></init-param>
     </filter>
     <filter>
         <filter-name>ContentUrlFilter</filter-name>

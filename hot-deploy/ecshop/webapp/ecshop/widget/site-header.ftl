@@ -28,19 +28,20 @@
     <div class="col-md-4">
 
         <div class="pull-right">
+
+            <#assign shoppingCart = sessionAttributes.shoppingCart?if_exists>
+            <#if shoppingCart?has_content>
+                <#assign shoppingCartSize = shoppingCart.size()>
+            <#else>
+                <#assign shoppingCartSize = 0>
+            </#if>
+
+            <a type="button" class="btn btn-default" href="<@ofbizUrl>view/showcart</@ofbizUrl>">
+                购物车
+            ${(shoppingCart.getTotalQuantity())!}
+            </a>
+
             <#if userLogin?has_content && userLogin.userLoginId != "anonymous">
-
-                <#assign shoppingCart = sessionAttributes.shoppingCart?if_exists>
-                <#if shoppingCart?has_content>
-                    <#assign shoppingCartSize = shoppingCart.size()>
-                <#else>
-                    <#assign shoppingCartSize = 0>
-                </#if>
-
-                <a type="button" class="btn btn-default" href="<@ofbizUrl>view/showcart</@ofbizUrl>">
-                    购物车
-                    ${(shoppingCart.getTotalQuantity())!}
-                </a>
 
                 <div class="btn-group">
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">

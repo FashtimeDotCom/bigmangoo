@@ -26,6 +26,10 @@ under the License.
         <section>
             <actions>
 
+                <!-- 右侧快速结算按钮 -->
+                <set field="rightbarScreenName" value="carttotalview" global="true"/>
+                <set field="rightbarScreenLocation" value="component://ecshop/widget/CartScreens.xml" global="true"/>
+
                 <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/cart/ShowCart.groovy"/>
 
             </actions>
@@ -45,4 +49,15 @@ under the License.
         </section>
     </screen>
 
+    <!-- 购物车总价格一览 -->
+    <screen name="carttotalview">
+        <section>
+            <widgets>
+                <platform-specific>
+                    <html><html-template location="component://ecshop/webapp/ecshop/cart/carttotalview.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    
 </screens>
