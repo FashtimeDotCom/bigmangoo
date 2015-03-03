@@ -8,7 +8,7 @@
                 <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
             </actions>
             <widgets>
-                <decorator-screen name="BM-AdminCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                <decorator-screen name="base-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
 
                         <platform-specific>
