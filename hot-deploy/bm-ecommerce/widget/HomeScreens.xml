@@ -27,8 +27,8 @@ under the License.
             <actions>
 
                 <!-- 网站分类列表 -->
-                <set field="leftbarScreenName" value="productCategoryWidget" global="true"/>
-                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/ProductScreens.xml" global="true"/>
+                <set field="leftbarScreenName" value="siteCategoryWidget" global="true"/>
+                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/CatalogScreens.xml" global="true"/>
 
             </actions>
             <widgets>

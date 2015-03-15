@@ -82,10 +82,8 @@ under the License.
                                 <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/common/site-header.ftl"/></html>
                             </platform-specific>
 
-                            <!-- 网站快速导航 -->
-                            <platform-specific>
-                                <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/common/site-navbar.ftl"/></html>
-                            </platform-specific>
+                            <!-- 网站目录导航 -->
+                            <include-screen name="siteCatalogWidget" location="component://bm-ecommerce/widget/CatalogScreens.xml"/>
 
                             <decorator-section-include name="body"/>
 
