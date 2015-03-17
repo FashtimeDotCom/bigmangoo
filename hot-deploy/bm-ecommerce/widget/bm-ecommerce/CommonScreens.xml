@@ -31,7 +31,7 @@ under the License.
                 <script location="component://ecommerce/widget/EcommerceSetup.groovy"/>
 
                 <!-- 网站logo -->
-                <set field="overrideLogo" value="/bm-admin/images/uploads/bm-logo.png" global="true"/>
+                <set field="overrideLogo" value="/bigmangoo/images/uploads/bm-logo.png" global="true"/>
 
             </actions>
             <widgets>
