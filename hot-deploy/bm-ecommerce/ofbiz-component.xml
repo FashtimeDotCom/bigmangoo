@@ -36,6 +36,6 @@ under the License.
         title="BM-Ecommerce"
         server="default-server"
         location="webapp/bm-ecommerce"
-        mount-point="/bm-ecommerce"
+        mount-point="/bigmangoo"
         app-bar-display="false"/>
 </ofbiz-component>

@@ -126,25 +126,25 @@ under the License.
     <request-map uri="customerAddress"><security https="false" auth="false"/><response name="success" type="view" value="customerAddress"/></request-map>
 
     <!-- 试图 -->
-    <view-map name="main" type="screen" page="component://bm-ecommerce/widget/HomeScreens.xml#main"/>
+    <view-map name="main" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/HomeScreens.xml#main"/>
     <!-- 登陆 -->
-    <view-map name="login" type="screen" page="component://bm-ecommerce/widget/HomeScreens.xml#login"/>
+    <view-map name="login" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/HomeScreens.xml#login"/>
     <!-- 注册用户 -->
-    <view-map name="newcustomer" type="screen" page="component://bm-ecommerce/widget/HomeScreens.xml#newcustomer"/>
+    <view-map name="newcustomer" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/HomeScreens.xml#newcustomer"/>
 
     <!-- 产品展示相关 -->
-    <view-map name="productCategoryList" type="screen" page="component://bm-ecommerce/widget/ProductScreens.xml#productCategoryList"/>
-    <view-map name="productDetail" type="screen" page="component://bm-ecommerce/widget/ProductScreens.xml#productDetail"/>
+    <view-map name="productCategoryList" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/ProductScreens.xml#productCategoryList"/>
+    <view-map name="productDetail" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/ProductScreens.xml#productDetail"/>
 
     <!-- 购物车相关 -->
-    <view-map name="showcart" type="screen" page="component://bm-ecommerce/widget/CartScreens.xml#showcart"/>
-    <view-map name="checkout" type="screen" page="component://bm-ecommerce/widget/CartScreens.xml#checkout"/>
+    <view-map name="showcart" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/CartScreens.xml#showcart"/>
+    <view-map name="checkout" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/CartScreens.xml#checkout"/>
 
     <!-- 用户相关 -->
-    <view-map name="customerInfo" type="screen" page="component://bm-ecommerce/widget/PersonScreens.xml#customerInfo"/>
-    <view-map name="orderHistory" type="screen" page="component://bm-ecommerce/widget/PersonScreens.xml#orderHistory"/>
-    <view-map name="orderDetail" type="screen" page="component://bm-ecommerce/widget/PersonScreens.xml#orderDetail"/>
-    <view-map name="changepassword" type="screen" page="component://bm-ecommerce/widget/PersonScreens.xml#changepassword"/>
-    <view-map name="customerAddress" type="screen" page="component://bm-ecommerce/widget/PersonScreens.xml#customerAddress"/>
+    <view-map name="customerInfo" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/PersonScreens.xml#customerInfo"/>
+    <view-map name="orderHistory" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/PersonScreens.xml#orderHistory"/>
+    <view-map name="orderDetail" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/PersonScreens.xml#orderDetail"/>
+    <view-map name="changepassword" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/PersonScreens.xml#changepassword"/>
+    <view-map name="customerAddress" type="screen" page="component://bm-ecommerce/widget/bm-ecommerce/PersonScreens.xml#customerAddress"/>
 
 </site-conf>

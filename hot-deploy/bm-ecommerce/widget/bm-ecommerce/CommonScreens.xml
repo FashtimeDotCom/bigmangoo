@@ -30,9 +30,6 @@ under the License.
                 <!-- 初始化当前店铺数据 -->
                 <script location="component://ecommerce/widget/EcommerceSetup.groovy"/>
 
-                <!-- 设置当前网店使用的模板 -->
-                <set field="THEME_NAME" value="bm-ecommerce" global="true"/>
-
                 <!-- 网站logo -->
                 <set field="overrideLogo" value="/bm-admin/images/uploads/bm-logo.png" global="true"/>
 
@@ -45,7 +42,7 @@ under the License.
                     <widgets>
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/common/header.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/common/header.ftl"/></html>
                         </platform-specific>
 
                         <container style="container">
@@ -53,7 +50,7 @@ under the License.
                         </container>
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/common/footer.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/common/footer.ftl"/></html>
                         </platform-specific>
 
                     </widgets>
@@ -79,11 +76,11 @@ under the License.
 
                             <!-- 网站标题，网站搜索框，个人快速操作栏 -->
                             <platform-specific>
-                                <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/common/site-header.ftl"/></html>
+                                <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/common/site-header.ftl"/></html>
                             </platform-specific>
 
                             <!-- 网站目录导航 -->
-                            <include-screen name="siteCatalogWidget" location="component://bm-ecommerce/widget/CatalogScreens.xml"/>
+                            <include-screen name="siteCatalogWidget" location="component://bm-ecommerce/widget/bm-ecommerce/CatalogScreens.xml"/>
 
                             <decorator-section-include name="body"/>
 

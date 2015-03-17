@@ -28,7 +28,7 @@ under the License.
 
                 <!-- 网站分类列表 -->
                 <set field="leftbarScreenName" value="siteCategoryWidget" global="true"/>
-                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/CatalogScreens.xml" global="true"/>
+                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/bm-ecommerce/CatalogScreens.xml" global="true"/>
 
             </actions>
             <widgets>
@@ -36,7 +36,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/main.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/main.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
@@ -55,7 +55,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/login.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/login.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
@@ -74,7 +74,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/newcustomer.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/newcustomer.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>

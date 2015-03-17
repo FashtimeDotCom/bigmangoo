@@ -25,15 +25,15 @@ under the License.
     <title>首页</title>
 
     <!-- Loading Bootstrap -->
-    <link href="/bm-ecommerce/images/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="/bigmangoo/images/css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- Loading Flat UI -->
-    <link href="/bm-ecommerce/images/css/flat-ui.min.css" rel="stylesheet">
+    <link href="/bigmangoo/images/css/flat-ui.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
-    <script src="/ecshop/images/js/vendor/html5shiv.js"></script>
-    <script src="/ecshop/images/js/vendor/respond.min.js"></script>
+    <script src="/bigmangoo/images/js/vendor/html5shiv.js"></script>
+    <script src="/bigmangoo/images/js/vendor/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>

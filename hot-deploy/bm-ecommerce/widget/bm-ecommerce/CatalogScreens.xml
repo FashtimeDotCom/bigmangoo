@@ -32,7 +32,7 @@ under the License.
             <widgets>
 
                 <platform-specific>
-                    <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/catalog/siteCatalogWidget.ftl"/></html>
+                    <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/catalog/siteCatalogWidget.ftl"/></html>
                 </platform-specific>
 
             </widgets>
@@ -50,7 +50,7 @@ under the License.
             <widgets>
 
                 <platform-specific>
-                    <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/catalog/siteCategoryWidget.ftl"/></html>
+                    <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/catalog/siteCategoryWidget.ftl"/></html>
                 </platform-specific>
 
             </widgets>

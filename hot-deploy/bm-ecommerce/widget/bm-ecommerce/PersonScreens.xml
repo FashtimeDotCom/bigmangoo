@@ -28,7 +28,7 @@ under the License.
 
                 <!-- 网站分类列表 -->
                 <set field="leftbarScreenName" value="personNavWidget" global="true"/>
-                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/PersonScreens.xml" global="true"/>
+                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/bm-ecommerce/PersonScreens.xml" global="true"/>
 
             </actions>
             <widgets>
@@ -36,7 +36,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/person/customerInfo.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/person/customerInfo.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
@@ -52,7 +52,7 @@ under the License.
 
                 <!-- 网站分类列表 -->
                 <set field="leftbarScreenName" value="personNavWidget" global="true"/>
-                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/PersonScreens.xml" global="true"/>
+                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/bm-ecommerce/PersonScreens.xml" global="true"/>
 
             </actions>
             <widgets>
@@ -60,7 +60,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/person/orderHistory.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/person/orderHistory.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
@@ -84,7 +84,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/person/orderDetail.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/person/orderDetail.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
@@ -108,7 +108,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/person/changepassword.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/person/changepassword.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
@@ -132,7 +132,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/person/customerAddress.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/person/customerAddress.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
@@ -149,7 +149,7 @@ under the License.
             <widgets>
 
                 <platform-specific>
-                    <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/person/personNavWidget.ftl"/></html>
+                    <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/person/personNavWidget.ftl"/></html>
                 </platform-specific>
 
             </widgets>

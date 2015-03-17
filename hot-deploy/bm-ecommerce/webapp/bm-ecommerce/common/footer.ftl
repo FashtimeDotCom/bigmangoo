@@ -16,8 +16,8 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-<script src="/bm-ecommerce/images/js/vendor/jquery.min.js"></script>
-<script src="/bm-ecommerce/images/js/flat-ui.min.js"></script>
+<script src="/bigmangoo/images/js/vendor/jquery.min.js"></script>
+<script src="/bigmangoo/images/js/flat-ui.min.js"></script>
 
 </body>
 </html>

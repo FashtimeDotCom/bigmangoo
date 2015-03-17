@@ -28,7 +28,7 @@ under the License.
 
                 <!-- 网站分类列表 -->
                 <set field="leftbarScreenName" value="siteCategoryWidget" global="true"/>
-                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/CatalogScreens.xml" global="true"/>
+                <set field="leftbarScreenLocation" value="component://bm-ecommerce/widget/bm-ecommerce/CatalogScreens.xml" global="true"/>
 
                 <!-- 通过分类id取得分类下所有商品 -->
                 <script location="component://bm-ecommerce/webapp/bm-ecommerce/WEB-INF/actions/product/productCategoryList.groovy"/>
@@ -39,7 +39,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/product/productCategoryList.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/product/productCategoryList.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
@@ -59,7 +59,7 @@ under the License.
                     <decorator-section name="body">
 
                         <platform-specific>
-                            <html><html-template location="component://bm-ecommerce/webapp/${THEME_NAME}/product/productDetail.ftl"/></html>
+                            <html><html-template location="component://bm-ecommerce/webapp/bm-ecommerce/product/productDetail.ftl"/></html>
                         </platform-specific>
 
                     </decorator-section>
